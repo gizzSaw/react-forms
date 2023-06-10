@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TextField from "./textField";
 
 const MyForm = () => {
   const [values, setValues] = useState({
@@ -24,42 +25,30 @@ const MyForm = () => {
     <>
       <h1> My Form {email} </h1>
       <form onSubmit={handleSubmit}>
-        <p>
-          <input
-            placeholder="Your Email"
-            id="email"
-            type="text"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
-        </p>
-        <p>
-          <input
-            placeholder="Описание"
-            id="description"
-            type="description"
-            name="description"
-            value={description}
-            onChange={handleChange}
-          />
-        </p>
+        <TextField
+          id="email"
+          name="email"
+          label="Email"
+          value={email}
+          onChange={handleChange}
+        />
+
+        <TextField
+          id="link"
+          name="link"
+          label="Ссылка на страницу с ошибкой"
+          value={link}
+          onChange={handleChange}
+        />
+
+        <TextField
+          id="description"
+          name="description"
+          label="Описание"
+          value={description}
+          onChange={handleChange}
+        />
         <button type="submit">Отправить</button>
-      </form>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Красный <input type="radio" name="color" />
-        </label>
-
-        <br />
-
-        <label>
-          Синий <input type="radio" name="color" />
-        </label>
-
-        <p>
-          <button type="submit">Отправить</button>
-        </p>
       </form>
     </>
   );

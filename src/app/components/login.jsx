@@ -5,7 +5,6 @@ const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
   const handleChange = ({ target }) => {
     setData((prevState) => ({ ...prevState, [target.name]: target.value }));
-    console.log(data);
   };
 
   return (

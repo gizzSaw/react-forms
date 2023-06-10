@@ -5,8 +5,8 @@ import MyForm from './components/myForm';
 
 function App() {
   return <div className="App">
-    <Login/>
-    {/* <MyForm/> */}
+    {/* <Login/> */}
+    <MyForm/>
     {/* <ErrorMassage/> */}
   </div>;
 }
